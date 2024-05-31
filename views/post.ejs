@@ -1,0 +1,37 @@
+<!-- views/post.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= post.title %></title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+    <br>
+
+        <nav>
+            <a href="/">Home</a>
+            <header>
+                <h1><%= post.title %></h1>
+            </header>
+            <a href="/posts/new">Create New Post</a>
+        </nav>
+        
+    <br>
+
+
+    <div class="container">
+
+        <div class="post-preview">
+                    <p style="padding: 2%;"><%= post.content %></p>
+        <form action="/posts/<%= post._id %>/delete" method="POST">
+            <button type="submit">Delete</button>
+        </form>
+        </div>
+
+    </div>
+    <footer>
+        <p>&copy; 2024 Adithya Mittapally</p>
+    </footer>
+</body>
+</html>
